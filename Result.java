@@ -1,19 +1,19 @@
 public class Result {
 
   private int index;
-  private String type;
+  private Search.SearchResult result;
 
-  public Result(int index, String type) {
+  public Result(int index, Search.SearchResult result) {
     this.index = index;
-    this.type = type;
+    this.result = result;
   }
 
   public int getIndex() {
     return this.index;
   }
 
-  public String getType() {
-    return this.type;
+  public Search.SearchResult getResult() {
+    return this.result;
   }
 
 }
