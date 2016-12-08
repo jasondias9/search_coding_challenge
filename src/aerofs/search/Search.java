@@ -77,7 +77,10 @@ public class Search {
         if(items[i] > key && isAscending) {
           return new Result(i, SearchResult.FOUND_GREATER);
         } else if(items[i] <= key && !isAscending) {
-          return new Result(i, SearchResult.FOUND_GREATER);
+          if (i - 1 >= 0) {
+            return new Result(i-1, SearchResult.FOUND_GREATER);
+          }
+          return new Result(-1, SearchResult.NOT_FOUND);
         }
       }
       return new Result(-1, SearchResult.NOT_FOUND);
@@ -91,7 +94,7 @@ public class Search {
             if (items[i] < key && !isAscending) {
                 return new Result(i, SearchResult.FOUND_LESS);
             } else if (items[i] >= key && isAscending) {
-                if (i - 1 > 0) {
+                if (i - 1 >= 0) {
                     return new Result(i - 1, SearchResult.FOUND_LESS);
                 }
                 return new Result(-1, SearchResult.NOT_FOUND);
