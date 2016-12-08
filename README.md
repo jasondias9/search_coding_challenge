@@ -30,8 +30,9 @@ Implementation notes
 * No build tool (mvn, gradle etc) included
 * Methods on `aerofs.search.Search` class don't practice defensive programming (e.g. checking length or order)
 * `searchGreaterThan()` , `searchLessThan()`, `searchEquals()` in `aerofs.search.Search` may have been abstracted, however was deemed an overengineered solution.
-* Was unsure if external libraries were allowed, tests so failing tests print and
-throw exception.
+* Was unsure if external libraries were allowed, implemented test framework
+  * Upon test failure, print the failed test and abort running additional tests
+  * Upon complete test success, exit with success message.
 
 
 Building and running tests
