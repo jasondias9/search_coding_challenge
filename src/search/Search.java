@@ -1,4 +1,4 @@
-package aerofs.search;
+package search;
 
 import java.util.Arrays;
 
