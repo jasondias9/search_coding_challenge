@@ -2,7 +2,7 @@
 Problem statement
 -----------------
 
-Thanks again for your interest in AeroFS. As the next step in our interview
+Thanks again for your interest in ______. As the next step in our interview
 process, we ask that you please show us a bit of your design and coding skills
 with the following coding challenge.
 
@@ -28,8 +28,8 @@ Implementation notes
     * Arrays in java hava a `.length` property which makes the `n_items` field redundant
     * `ascending` property would typically be a boolean
 * No build tool (mvn, gradle etc) included
-* Methods on `aerofs.search.Search` class don't practice defensive programming (e.g. checking length or order)
-* `searchGreaterThan()` , `searchLessThan()`, `searchEquals()` in `aerofs.search.Search` may have been abstracted, however was deemed an overengineered solution.
+* Methods on `search.Search` class don't practice defensive programming (e.g. checking length or order)
+* `searchGreaterThan()` , `searchLessThan()`, `searchEquals()` in `search.Search` may have been abstracted, however was deemed an over-engineered solution.
 * Was unsure if external libraries were allowed, implemented own test framework
   * Upon test failure, print the failed test and abort running additional tests
   * Upon complete test success, exit with success message.

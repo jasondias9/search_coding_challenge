@@ -4,4 +4,4 @@ set -e
 
 javac $(find . -name '*.java')
 
-java -cp test:src aerofs.search.SearchTest
+java -cp test:src search.SearchTest

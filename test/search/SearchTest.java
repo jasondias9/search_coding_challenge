@@ -1,15 +1,15 @@
-package aerofs.search;
+package search;
 
-import static aerofs.search.Search.SearchResult.FOUND_LESS;
-import static aerofs.search.Search.SearchResult.NOT_FOUND;
-import static aerofs.search.Search.SearchResult.FOUND_EXACT;
-import static aerofs.search.Search.SearchResult.FOUND_GREATER;
+import static search.Search.SearchResult.FOUND_LESS;
+import static search.Search.SearchResult.NOT_FOUND;
+import static search.Search.SearchResult.FOUND_EXACT;
+import static search.Search.SearchResult.FOUND_GREATER;
 
-import static aerofs.search.Search.SearchType.LESS_THAN;
-import static aerofs.search.Search.SearchType.EQUALS;
-import static aerofs.search.Search.SearchType.GREATER_THAN;
-import static aerofs.search.Search.SearchType.LESS_THAN_EQUALS;
-import static aerofs.search.Search.SearchType.GREATER_THAN_EQUALS;
+import static search.Search.SearchType.LESS_THAN;
+import static search.Search.SearchType.EQUALS;
+import static search.Search.SearchType.GREATER_THAN;
+import static search.Search.SearchType.LESS_THAN_EQUALS;
+import static search.Search.SearchType.GREATER_THAN_EQUALS;
 
 public class SearchTest {
 

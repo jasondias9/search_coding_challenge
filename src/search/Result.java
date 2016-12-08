@@ -1,6 +1,6 @@
-package aerofs.search;
+package search;
 
-import aerofs.search.Search.SearchResult;
+import search.Search.SearchResult;
 
 public class Result {
 
