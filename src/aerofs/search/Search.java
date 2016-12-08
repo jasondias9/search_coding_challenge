@@ -13,7 +13,7 @@ public class Search {
         LESS_THAN,
         LESS_THAN_EQUALS,
         EQUALS,
-        GREAT_THAN_EQUALS,
+        GREATER_THAN_EQUALS,
         GREATER_THAN
     }
 
@@ -40,7 +40,7 @@ public class Search {
                 return searchLessThanEqauls();
             case EQUALS:
                 return searchEquals();
-            case GREAT_THAN_EQUALS:
+            case GREATER_THAN_EQUALS:
                 return searchGreaterThanEquals();
             case GREATER_THAN:
                 return searchGreaterThan();
@@ -52,12 +52,12 @@ public class Search {
 
     public Result searchGreaterThanEquals() {
       Result exact =  searchEquals();
-      exact.getResult.equals(SearchResult.FOUND_EXACT) ? return result : return searchGreaterThan();
+      return exact.getResult().equals(SearchResult.FOUND_EXACT) ? exact : searchGreaterThan();
     }
 
     public Result searchLessThanEqauls() {
       Result exact = searchEquals();
-      exact.getResult.equals(SearchResult.FOUND_EXACT) ? return result : return searchLessThan();
+      return exact.getResult().equals(SearchResult.FOUND_EXACT) ? exact : searchLessThan();
     }
 
     public Result searchEquals() {
@@ -80,7 +80,7 @@ public class Search {
           return new Result(i, SearchResult.FOUND_GREATER);
         }
       }
-      return new Result(i, SearchResult.NOT_FOUND);
+      return new Result(-1, SearchResult.NOT_FOUND);
     }
 
     public Result searchLessThan() {
