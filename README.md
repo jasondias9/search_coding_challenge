@@ -22,13 +22,16 @@ go beyond it to other types of testing.
 
 
 Implementation notes
------
+--------------------
 
 * API consistent with C example
     * Arrays in java hava a `.length` property which makes the `n_items` field redundant
     * `ascending` property would typically be a boolean
 * No build tool (mvn, gradle etc) included
 * Methods on `aerofs.search.Search` class don't practice defensive programming (e.g. checking length or order)
+* #searchGreaterThan , #searchLessThan, #searchEquals in `aerofs.search.Search` may have been abstracted, however was deemed an overengineered solution.
+* Was unsure if external libraries were allowed, tests so failing tests print and
+throw exception. 
 
 
 Building and running tests
